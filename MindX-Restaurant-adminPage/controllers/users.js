@@ -46,11 +46,14 @@ async function updateUser(id) {
         let newPassword = document.getElementById("password").value
         let newDisplayName = document.getElementById("displayName").value
         await user.set({
-            name: newEmail,
-            description: newPassword,
-            imageURL: newDisplayName,
+            email: newEmail,
+            password: newPassword,
+            displayName: newDisplayName,
             isAdmin : false
         });
         $('#updateUserModal').modal('hide');
+        location.reload()
     })
 }
+
+
