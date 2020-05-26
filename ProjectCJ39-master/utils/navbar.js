@@ -26,19 +26,25 @@ let navbarContent = `
             </div>
             <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav2">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
+                    <li class="nav-item not-loggedIn">
                         <a class="nav-link text-light" href="https://www.instagram.com/khanhduy2906/" target="_blank">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item not-loggedIn">
                         <a class="nav-link text-light" href="https://www.twitter.com/vukhanh.duy.921" target="_blank">
                             <i class="fab fa-twitter"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item not-loggedIn">
                         <a class="nav-link text-light" href="https://www.facebook.com/vukhanh.duy.921" target="_blank">
                             <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item loggedIn notification">
+                        <a class="nav-link text-light" data-toggle="collapse" href="#notiCollapse" role="button" aria-expanded="false" aria-controls="notiCollapse" onclick="displayNotiCollapse()">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge" id="notiBadge"></span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -57,6 +63,10 @@ let navbarContent = `
 
 
             <div class="collapse" id="collapseExample">
+                
+            </div>
+
+            <div class="collapse" id="notiCollapse">
                 
             </div>
 
@@ -240,10 +250,11 @@ function toLogin() {
 
 function toCheckoutPage() {
     
-    let currentOrder = JSON.parse(localStorage.getItem("currentOrder"))
-    if(currentOrder) {
-        window.location.href = "checkout.html"
-    }
+    // let currentOrder = JSON.parse(localStorage.getItem("currentOrder"))
+    // if(currentOrder) {
+    //     window.location.href = "checkout.html"
+    // }
+    window.location.href = "checkout.html"
 }
 
 function validateEmail(email) {

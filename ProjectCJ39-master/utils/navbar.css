@@ -326,6 +326,15 @@ nav>div li {
   font-family : 'Montserrat';
 }
 
+#notiCollapse {
+  top:120px;
+  right: 0;
+  position: fixed;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 450px;
+  font-family : 'Montserrat';
+}
+
 .cart-header {
   border-bottom: 1px solid #ebebeb;
   padding: 10px 0;
@@ -395,3 +404,37 @@ nav>div li {
 #registerErrorAlert, #loginErrorAlert {
   display: none;
 }
+
+.notification {
+  position: relative;
+}
+
+.notification .badge {
+  /* width: 2px;
+  height: 2px; */
+
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  /* background: red; */
+  color: red;
+}
+
+.noti-time {
+  font-size : 10px;
+  color : #b6b6b6
+}
+
+.unreadNoti {
+  padding: 10px 20px;
+  background-color: #ececec;
+  border: 1px solid crimson;
+}
+
+.readNoti {
+  padding: 10px 20px;
+  border: 1px solid crimson;
+}
+
